@@ -1,5 +1,6 @@
-const database = [
-    {
+const database = {
+    pikomon: [
+        {
         id: 1,
         name: 'Crouchy',
         imageUrl: 'assets/crouchy.png',
@@ -70,5 +71,9 @@ const database = [
         category: 'Mischievous',
         abilities: 'Master of Pranks',
         weakness: 'Close Talkers'
-    }
-];
+    }]
+}
+
+export const getPikomon = () => {
+    return database.pikomon.map(pikomon => ({...pikomon}))
+}
